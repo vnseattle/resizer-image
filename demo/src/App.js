@@ -14,8 +14,8 @@ function App() {
   ]
 
   const onFileChange = async (e) => {
-    const file = e.target.files[0];
-    const resizedImages = await resize(file, sizes);
+    const input = e.target.files[0];
+    const resizedImages = await resize(input, sizes);
     setImages(resizedImages)
   }
 
@@ -26,7 +26,10 @@ function App() {
         onChange={onFileChange}
         accept="image/*"
       />
-      {images.map((img, index) => <div>{sizes[index].w}x{sizes[index].h}<br /><img src={img} alt='resized' /></div>)}
+      {images.map((img, index) => <div key={index}>
+        {sizes[index].w}x{sizes[index].h}<br />
+        <img src={img} alt='resized' />
+      </div>)}
     </div>
   );
 }
