@@ -1,0 +1,29 @@
+{
+  "name": "resizer-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnseattle/resizer-image.git"
+  },
+  "keywords": [
+    "image",
+    "resizer",
+    "picture",
+    "base64",
+    "image",
+    "file",
+    "resize",
+    "blob"
+  ],
+  "author": "Dev9x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vnseattle/resizer-image/issues"
+  },
+  "homepage": "https://github.com/vnseattle/resizer-image#readme"
+}
