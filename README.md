@@ -11,7 +11,7 @@ npm i resizer-image
 
 # Usage 
 ```js
-import { resize } from "resizer-image";
+import { resize } from "resize-image-js";
 ```
 ```js
 const sizes = [

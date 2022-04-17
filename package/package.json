@@ -1,7 +1,7 @@
 {
   "name": "resizer-image",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Resize images on client-side",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,9 @@
     "image",
     "file",
     "resize",
-    "blob"
+    "blob",
+    "compress",
+    "photo"
   ],
   "author": "Dev9x",
   "license": "MIT",
