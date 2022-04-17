@@ -28,12 +28,13 @@ const resizedImages = await resize(input, sizes); //=> [ "blob:http://....","blo
 ```
 ## Params  
 ```js
-resize(input, sizes)
+resize(input, sizes, type='png')
 ```
 | Param | Description | Example
 | ------   | ------ |  ------ | 
 | input   | a file or base64 src | e.target.```files[0]``` | 
 | sizes   | an array of sizes | [{ w: ```160```, h: ```90``` },{ w: ```320```, h: ```180``` }] | 
+| type   | image type | png, jpeg, jpg, webp | 
 
 * h=```0```, keep the ratio of height 
 * w=```0```, keep the ratio of width

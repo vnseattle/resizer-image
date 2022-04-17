@@ -1,6 +1,6 @@
 {
   "name": "resizer-image",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Resize images on client-side",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,7 @@
 /*************************************************************
 Resizer Images
 © 2022 Henry Nguyen a.k.a Dev9x
+Resize images on client-side
 ************************************************************/
 const initalSizes = [
     { w: 160, h: 90 },
@@ -14,7 +15,7 @@ const initalSizes = [
  * @param {*} sizes = an array of sizes in pixels [{x: number , y: number }]
  * @returns an array of resized image in blob 
  */
-export const resize = async (input, sizes = initalSizes) => {
+export const resize = async (input, sizes = initalSizes, type = "png") => {
     const results = [];
     let imageBase64 = input; // base64 default
     if (typeof input === 'object') { // file object 
@@ -34,7 +35,7 @@ export const resize = async (input, sizes = initalSizes) => {
             width = image.width;
             height = image.height;
         }
-        const resizedImage = await resizeImage(image, width, height); // resize the image
+        const resizedImage = await resizeImage(image, width, height, type); // resize the image
         results.push(resizedImage)
     }
     return results.length > 1 ? results : results;
@@ -59,7 +60,7 @@ export const base64ToImage = (base64) => {
     });
 }
 
-const resizeImage = (img, width, height) => {
+const resizeImage = (img, width, height, type) => {
     var canvas = document.createElement('canvas'),
         ctx = canvas.getContext('2d');
     canvas.width = width;
@@ -68,6 +69,6 @@ const resizeImage = (img, width, height) => {
     return new Promise((resolve) => {
         canvas.toBlob((file) => {
             resolve(URL.createObjectURL(file));
-        }, "image/jpeg");
+        }, `image/${type}`);
     });
 }
