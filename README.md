@@ -39,7 +39,9 @@ resize(input, sizes)
 * w=```0```, keep the ratio of width
 
 ## Sources
+
 CodeSandbox: https://codesandbox.io/s/resizer-image-demo-l65mhh?file=/src/App.js 
+
 Github: https://github.com/vnseattle/resizer-image
 
 ### Happy coding
